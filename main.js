@@ -97,7 +97,6 @@ bot.action('check_subscription', async ctx => {
   }
 })
 
-// Til tanlash action handleri
 bot.action(/^language_(.+)$/, async ctx => {
   const selectedLanguage = ctx.match[1]
 
@@ -206,7 +205,6 @@ bot.on('text', async ctx => {
         `💬 Xabar: <code>${ctx.message.text}</code>`
 
   try {
-    // Adminga xabar yuborish
     await ctx.telegram.sendMessage(ADMIN_ID, formattedMessage, {
       parse_mode: 'HTML',
       reply_markup: {
@@ -234,7 +232,6 @@ bot.on('text', async ctx => {
   }
 })
 
-// Admin javob berish uchun handler
 bot.action(/^reply_(\d+)$/, async ctx => {
   const userId = ctx.match[1]
   await ctx.answerCbQuery()
@@ -242,7 +239,6 @@ bot.action(/^reply_(\d+)$/, async ctx => {
   await ctx.reply(`Iltimos, foydalanuvchiga javobingizni yozing:`)
 })
 
-// Foydalanuvchi adminga javob berish uchun handler
 bot.action(/^user_reply_(\d+)$/, async ctx => {
   const adminId = ctx.match[1]
   await ctx.answerCbQuery()
@@ -253,12 +249,10 @@ bot.action(/^user_reply_(\d+)$/, async ctx => {
   await ctx.reply('Iltimos, adminga javobingizni yozing:')
 })
 
-// Xatoliklarni tekshirish
 bot.catch((err, ctx) => {
   console.error(`Ooops, encountered an error for ${ctx.updateType}`, err)
 })
 
-// Botni ishga tushirish
 bot
   .launch()
   .then(() => {
@@ -268,6 +262,5 @@ bot
     console.error('Botni ishga tushirishda xatolik:', err)
   })
 
-// Graceful stop
 process.once('SIGINT', () => bot.stop('SIGINT'))
 process.once('SIGTERM', () => bot.stop('SIGTERM'))
