@@ -66,7 +66,6 @@ bot.command('start', async ctx => {
       )
     }
   } catch (error) {
-    console.error('Boshlangich xatolik:', error)
     await ctx.reply("Tizimda muammo yuz berdi. Keyinroq urinib ko'ring.")
   }
 })
