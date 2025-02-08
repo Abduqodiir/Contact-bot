@@ -76,7 +76,7 @@ bot.action('check_subscription', async ctx => {
 
     if (isMember) {
       await ctx.answerCbQuery(`✅ ${ctx.from.first_name} muvaffaqiyatli obuna bo'ldingiz!`)
-      await ctx.reply(`🎉 ${ctx.from.first_name} tabriklaymiz! Siz muvaffaqiyatli obuna bo'ldingiz.`)
+      await ctx.reply(`🎉 ${ctx.from.first_name} tabriklaymiz! Siz muvaffaqiyatli obuna bo'ldingiz`)
       await ctx.editMessageText(
         '🌐 Tilni tanlang / Select language / Выберите язык:',
         Markup.inlineKeyboard([
