@@ -226,7 +226,6 @@ bot.on('text', async ctx => {
 
     await ctx.reply(messages[language])
   } catch (error) {
-    console.error('Xabar yuborishda xatolik:', error)
     await ctx.reply('Xabarni yuborishda muammo yuz berdi.')
   }
 })
