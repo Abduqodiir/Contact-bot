@@ -247,9 +247,6 @@ bot.action(/^user_reply_(\d+)$/, async ctx => {
   await ctx.reply('Iltimos, adminga javobingizni yozing:')
 })
 
-bot.catch((err, ctx) => {
-  console.error(`Ooops, encountered an error for ${ctx.updateType}`, err)
-})
 
 bot
   .launch()
