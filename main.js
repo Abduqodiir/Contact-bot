@@ -254,7 +254,7 @@ bot
     console.log('Bot muvaffaqiyatli ishga tushdi!')
   })
   .catch(err => {
-    console.error('Botni ishga tushirishda xatolik:', err)
+    console.error('Botni ishga tushirishda error yuzaga keldi: ', err)
   })
 
 process.once('SIGINT', () => bot.stop('SIGINT'))
