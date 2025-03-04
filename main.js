@@ -251,7 +251,7 @@ bot.action(/^user_reply_(\d+)$/, async ctx => {
 bot
   .launch()
   .then(() => {
-    console.log('Bot muvaffaqiyatli ishga tushdi!')
+    console.log('Bot muvaffaqiyatli ishga tushdi')
   })
   .catch(err => {
     console.error('Botni ishga tushirishda error yuzaga keldi: ', err)
