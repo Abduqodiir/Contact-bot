@@ -255,6 +255,7 @@ bot
   })
   .catch(err => {
     console.error('Botni ishga tushirishda error yuzaga keldi: ', err)
+    console.log("day 1")
   })
 
 process.once('SIGINT', () => bot.stop('SIGINT'))
